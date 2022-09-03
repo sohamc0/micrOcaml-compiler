@@ -2,7 +2,7 @@ open MicroCamlTypes
 open Utils
 open TokenTypes
 
-(* Provided functions - DO NOT MODIFY *)
+(* Parser - Author: Soham Choudhury *)
 
 (* Matches the next token in the list, throwing an error if it doesn't match the given token *)
 let match_token (toks: token list) (tok: token) =
@@ -32,7 +32,7 @@ let rec lookahead_many (toks: token list) (n: int) =
   | _::t, n when n > 0 -> lookahead_many t (n-1)
   | _ -> None
 
-(* Part 2: Parsing expressions *)
+(* Parsing expressions *)
 
 let rec parse_exp toks = let j = lookahead toks in
   if j=Some Tok_Let then parse_let_expr toks
@@ -231,7 +231,7 @@ and parse_prim_expr toks =
 
 let rec parse_expr toks = let (b,a) = parse_exp toks in (a,b);;
 
-(* Part 3: Parsing mutop *)
+(* Parsing mutop *)
 
 let rec parse_mutop toks = match toks with
   | Tok_Def::t -> let (final_val, lst) = (parse_def toks) in

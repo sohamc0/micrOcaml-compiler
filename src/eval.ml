@@ -5,7 +5,7 @@ exception TypeError of string
 exception DeclareError of string
 exception DivByZeroError 
 
-(* Provided functions - DO NOT MODIFY *)
+(* Author: Soham Choudhury *)
 
 (* Adds mapping [x:v] to environment [env] *)
 let extend env x v = (x, ref v)::env
@@ -132,7 +132,7 @@ let rec eval_expr env e = match e with
 
 
 
-(* Part 2: Evaluating mutop directive *)
+(* Evaluating mutop directive *)
 
 (* Evaluates MicroCaml mutop directive [m] in environment [env],
    returning a possibly updated environment paired with

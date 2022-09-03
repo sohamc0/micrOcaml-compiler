@@ -1,7 +1,7 @@
 open TokenTypes
 open Str
 
-(* Part 1: Lexer - IMPLEMENT YOUR CODE BELOW *)
+(* Lexer - Author: Soham Choudhury *)
 
 
 let tokenize input = let rec tok pos s =

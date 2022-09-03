@@ -29,7 +29,7 @@ A `TypeError` happens when an operation receives an argument of the wrong type; 
 
 Evaluation of subexpressions should be done from left to right to ensure that lines with multiple possible errors match up with our expected errors.
 
-Now we describe what your interpreter should do for each kind of `expr`, i.e.,
+Here's what the interpreter should do for each kind of `expr`, i.e.,
 
 ```
 type expr =
@@ -61,7 +61,7 @@ eval_expr [] (Value(Bool false)) = Bool false
 eval_expr [] (Value(String "x")) = String "x"
 ```
 
-A *closure* is the result of evaluating an anonymous function; it, too, evaluates to itself. We will discuss closures in detail when considering anonymous functions, and function calls, below.
+A *closure* is the result of evaluating an anonymous function; it, too, evaluates to itself. Closures are seen in detail when considering anonymous functions, and function calls, below.
 ```ocaml
 eval_expr [] (Value(Closure ([], "x", Fun ("y", Binop (Add, ID "x", ID "y"))))) = Closure ([], "x", Fun ("y", Binop (Add, ID "x", ID "y")))
 ```
@@ -93,7 +93,7 @@ There are five sorts of binary operator: Those carrying out integer arithmetic; 
 
 #### Add, Sub, Mult, and Div
 
-Arithmetic operators work on integers; if either argument evaluates to a non-`Int`, a `TypeError` should be raised. An attempt to divide by zero should raise a `DivByZeroError` exceptio. 
+Arithmetic operators work on integers; if either argument evaluates to a non-`Int`, a `TypeError` should be raised. An attempt to divide by zero should raise a `DivByZeroError` exception. 
 
 ```ocaml
 eval_expr [] (Binop (Add, Value(Int 1), Value(Int 2))) = Int 3

@@ -25,7 +25,7 @@ exception DeclareError of string
 exception DivByZeroError
 ```
 
-A `TypeError` happens when an operation receives an argument of the wrong type; a `DeclareError` happens when an ID is seen that has not been declared; and a `DivByZeroError` happens on attempted division by zero. We do not enforce what messages you use when raising the `TypeError` or `DeclareError` exceptions. That's up to you.
+A `TypeError` happens when an operation receives an argument of the wrong type; a `DeclareError` happens when an ID is seen that has not been declared; and a `DivByZeroError` happens on attempted division by zero. 
 
 Evaluation of subexpressions should be done from left to right to ensure that lines with multiple possible errors match up with our expected errors.
 

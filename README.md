@@ -2,13 +2,9 @@
 
 Skeleton code provided by cmsc330 fall 2021 course in github.com/anwarmamat
 
-### Info 
-
-In your code, you may use any standard library functions, but the ones that will be useful to you will be found in the [`Stdlib` module][stdlib doc].
-
 ### Running Mutop
 
-You can runnt the lexer, parser, and and your interpreter together in *mutop* (Micro-utop), a version of `utop` for MicroCaml. Run the command `dune exec bin/mutop.exe` in your terminal or use the shell script `bash mutop.sh` to start the mutop toplevel. The toplevel uses your implementations for `parse_mutop` and `eval_mutop` to execute MicroCaml expressions. Here is an example of its use:
+You can run the lexer, parser, and and your interpreter together in *mutop* (Micro-utop), a version of `utop` for MicroCaml. Run the command `dune exec bin/mutop.exe` in your terminal or use the shell script `bash mutop.sh` to start the mutop toplevel. The toplevel uses your implementations for `parse_mutop` and `eval_mutop` to execute MicroCaml expressions. Here is an example of its use:
 
 ![Mutop Example](assets/ex.gif)
 

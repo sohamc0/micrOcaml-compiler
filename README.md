@@ -1,6 +1,6 @@
 # MicroCaml Interpreter
 
-Skeleton code provided by cmsc330 fall 2021 course in github.com/anwarmamat
+Skeleton code provided by github.com/anwarmamat
 
 ### Running Mutop
 

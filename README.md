@@ -10,7 +10,7 @@ You can run the lexer, parser, and and your interpreter together in *mutop* (Mic
 
 **Note:** If you are having issues running *mutop*, run the command `dune build` before starting the mutop toplevel.
 
-## Part 1: Evaluating Expressions
+## Evaluating Expressions
 ### `eval_expr : environment -> expr -> value` 
 
 This function takes an environment `env` and an expression `e`, which is type `expr`, and produces the result of evaluating `e`, which is something of type `value`. All of the types mentioned here are defined in [microCamlTypes](src/microCamlTypes.ml); do not change any of them!
@@ -214,7 +214,7 @@ eval_expr [] (Let ("f", false, Fun ("x", Fun ("y", Binop (Add, ID "x", ID "y")))
 
 The AST in the second example is equivalent to the MicroCaml expression `let f = fun x -> fun y -> x + y in (f 1) 2`.
 
-## Part 2: Evaluating Mutop Directive
+## Evaluating Mutop Directive
 ### `eval_mutop : environment -> mutop -> environment * (value option)`
 
 This function evaluates the given `mutop` directive in the given `environment`, returning an updated environment with an optional `value` as the result. There are three kinds of `mutop` directive (as defined in [microCamlTypes.ml](./src/microCamlTypes.ml)):

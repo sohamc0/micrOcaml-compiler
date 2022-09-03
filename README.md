@@ -10,10 +10,6 @@ You can run the lexer, parser, and and your interpreter together in *mutop* (Mic
 
 **Note:** If you are having issues running *mutop*, run the command `dune build` before starting the mutop toplevel.
 
-## Operational Semantics
-
-We are going to describe how to implement your interpreter using examples, below. A more succinct description is this [operational semantics](./microcaml-opsem.pdf). Even if you don't use it much to do the project, we expect you to understand it -- we may take questions from it for the exam.
-
 ## Part 1: Evaluating Expressions
 ### `eval_expr : environment -> expr -> value` 
 
